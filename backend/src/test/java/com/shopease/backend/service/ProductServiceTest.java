@@ -1,7 +1,8 @@
 package com.shopease.backend.service;
 
-import com.shopease.backend.database.h2.entity.Products;
-import com.shopease.backend.database.h2.repository.ProductRepository;
+
+import com.shopease.backend.database.mongodb.data.Product;
+import com.shopease.backend.database.mongodb.repository.ProductRepository;
 import com.shopease.backend.database.mongodb.service.ProductService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -22,18 +23,18 @@ class ProductServiceTest {
 
     @Test
     void testSaveProduct() {
-        Products products = new Products();
-        products.setProductid(1L);
-        products.setName("rohan");
+        Product products = new Product();
+        products.setId(1L);
+        products.setTitle("rohan");
         products.setDescription("nothing");
         products.setPrice(10L);
-        products.setQuantity(12);
+
 
         Mockito.when(productRepository.save(products)).thenReturn(products);
-        Products addedProducts= productService.saveProduct(products);
+        Product addedProducts= productService.saveProduct(products);
         productService.saveProduct(products);
 
         Assertions.assertNotNull(addedProducts);
-        Assertions.assertEquals(products.getProductid(),addedProducts.getProductid());
+        Assertions.assertEquals(products.getId(),addedProducts.getId());
     }
 }
