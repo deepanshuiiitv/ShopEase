@@ -31,8 +31,8 @@ public class OrderService {
         return orderRepository.findByOrderId(id);
     }
 
-    public Optional<Order> getOrderByUserId(long userId) {
-        return orderRepository.findById(userId);
+    public Optional<List<Order>> getOrderByUserId(long userId) {
+        return orderRepository.findByUserId(userId);
     }
 
     public Order saveOrder(long userId) {

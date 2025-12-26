@@ -95,7 +95,7 @@ export default function CartProduct() {
             <p className="text-gray-800 font-semibold mt-2">
               ${Number(product.price).toFixed(2)}
             </p>
-            <div className="flex items-center gap-3 text-sm text-gray-700">
+            {/* <div className="flex items-center gap-3 text-sm text-gray-700">
               <span className="font-medium">Qty:</span>
               <div className="flex items-center border border-gray-300 rounded-full px-3 py-1">
                 <button
@@ -114,7 +114,7 @@ export default function CartProduct() {
                   +
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       ))}

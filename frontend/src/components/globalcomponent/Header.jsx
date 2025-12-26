@@ -71,7 +71,7 @@ export default function Header() {
     if (GetUserId() === null) {
       setModal(!modal);
     } else {
-      navigate("/");
+      navigate("/Myorders");
     }
   };
 

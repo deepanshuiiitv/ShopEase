@@ -1,19 +1,10 @@
 import CartProduct from "@/components/cartpagecomponent/CartProduct";
-import DeliveryInfo from "@/components/cartpagecomponent/DeliveryInfo";
-import DeliveryInfoEdit from "@/components/cartpagecomponent/DeliveryInfoEdit";
 import SummaryInCart from "@/components/cartpagecomponent/SummaryInCart";
-import { useState } from "react";
 import { useRecoilState } from "recoil";
 import OrderSuccessModal from "../components/cartpagecomponent/OrderSuccessModal";
 import { orderSuccessModal } from "../data/atoms/atoms";
-import { GetUserId } from "../data/Check";
-import { useNavigate } from "react-router-dom";
 
 export default function CartCheckout() {
-  const [deliveryInfoEdit, setdeliveryInfoEdit] = useState(false);
-  const handleToggleDeliveryInfoEdit = () => {
-    setdeliveryInfoEdit((prev) => !prev);
-  };
   const [ordersuccessmodal, setordersuccessmodal] =
     useRecoilState(orderSuccessModal);
 
@@ -29,17 +20,8 @@ export default function CartCheckout() {
                 Home / <span className="text-black font-medium">Checkout</span>
               </p>
               {/* Product Review */}
-
               <CartProduct />
-
-              {/* Delivery Info */}
-
-              <DeliveryInfo onToggleEdit={handleToggleDeliveryInfoEdit} />
-
-              {/* Delivery Info  Edit*/}
-              {deliveryInfoEdit && <DeliveryInfoEdit />}
             </div>
-
             {/* Right Side */}
             <SummaryInCart />
           </div>

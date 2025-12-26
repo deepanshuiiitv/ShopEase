@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import App from "./App.jsx";
+import UserLayout from "./layouts/UserLayout.jsx";
 
 import "./index.css";
 

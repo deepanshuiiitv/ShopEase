@@ -4,12 +4,5 @@ import AllRoute from "@/routes/AllRoute";
 import { Productsfetcher } from "./data/Productsfetcher";
 
 export default function App() {
-  return (
-    <>
-      <Header />
-      <AllRoute />
-      <Footer />
-      <Productsfetcher />
-    </>
-  );
+  return <AllRoute />;
 }

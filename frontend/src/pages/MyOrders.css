@@ -1,0 +1,89 @@
+.myorders {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.myorders h2 {
+  margin-bottom: 20px;
+}
+
+.order-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-id {
+  font-weight: 600;
+}
+
+.order-date {
+  font-size: 13px;
+  color: #666;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.Delivered {
+  background: #e6f7ee;
+  color: #22a06b;
+}
+
+.status.Processing {
+  background: #fff4e5;
+  color: #d97706;
+}
+
+.order-items {
+  margin: 15px 0;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total {
+  font-weight: 600;
+}
+
+.actions button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+}
+
+button.outline {
+  background: transparent;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+}
