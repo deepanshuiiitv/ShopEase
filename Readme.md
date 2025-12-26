@@ -1,21 +1,19 @@
-# currently working
-
 # 🛍️ ShopEase — Full Stack E-Commerce Application
 
 ShopEase is a full-stack e-commerce platform built using:
 
 - **Backend:** Spring Boot (Java), MySQL, MongoDB
 - **Frontend:** React + Vite
-- **Database:** MySQL (Authentication & Users) + MongoDB (Products)
+- **Database:** MySQL (Authentication & Users) + MongoDB (Products,Orders,Carts)
 
 ---
 
 ## 🚀 Features
 
 - 🔐 JWT Authentication & Role-based Access Control (Admin/User)
-- 👤 User Registration & Login
+- 👤 User Registration & Login & Admin Dashboard
 - 📦 Product Management (MongoDB)
-- 🛒 Cart and Wishlist
+- 🛒 Cart
 - 🌐 API-based architecture
 - 💾 Persistent database storage
 
@@ -27,7 +25,7 @@ ShopEase is a full-stack e-commerce platform built using:
 
 Run the following commands in MySQL terminal:
 
-```sql
+````sql
 CREATE DATABASE shopeaseDb;
 USE shopeaseDb;
 
@@ -91,6 +89,8 @@ mongoimport --db shopease --collection product --file ./data.json --jsonArray
 > sudo apt install mongodb-database-tools
 > ```
 
+Run backend -> `ShopEaseApplication` file using Intelllij Idea
+
 ---
 
 ## 🎨 Frontend Setup (React + Vite)
@@ -108,6 +108,7 @@ The frontend will run at:
 http://localhost:3000
 ```
 
+
 ---
 
 ## 🧪 Testing
@@ -115,8 +116,7 @@ http://localhost:3000
 You can test REST API using:
 
 * Postman
-* Thunder Client (VS Code)
-* Swagger (if enabled)
+* VS Code
 
 ---
 
