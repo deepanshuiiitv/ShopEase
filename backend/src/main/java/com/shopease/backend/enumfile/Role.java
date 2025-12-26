@@ -1,7 +1,10 @@
 package com.shopease.backend.enumfile;
 
+import lombok.Getter;
+
 import java.util.Set;
 
+@Getter
 public enum Role {
     ADMIN(Set.of(Permissions.PRODUCT_READ,Permissions.PRODUCT_WRITE,Permissions.PRODUCT_DELETE)),
     USER(Set.of(Permissions.PRODUCT_READ));
@@ -12,7 +15,4 @@ public enum Role {
         this.permissions = permissions;
     }
 
-    public Set<Permissions> getPermissions() {
-        return permissions;
-    }
 }

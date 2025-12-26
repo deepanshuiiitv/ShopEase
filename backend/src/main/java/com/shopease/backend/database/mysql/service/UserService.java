@@ -13,6 +13,7 @@ import org.apache.catalina.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -78,5 +79,18 @@ public class UserService {
         response.addCookie(userIdInCookie);
 
         return true;
+    }
+    public List<UserDto> getAllUsers() {
+        return userDetailsRepository.findAll()
+                .stream()
+                .map(this::toDto)
+                .toList(); // Java 17+
+    }
+
+    private UserDto toDto(Users user) {
+        UserDto dto = new UserDto();
+        dto.setGmail(user.getGmail());
+        dto.setFullname(user.getFullName());
+        return dto;
     }
 }

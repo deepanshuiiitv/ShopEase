@@ -42,7 +42,7 @@ public class SecurityConfig {
                                 .requestMatchers("/api/externalproduct/**").permitAll()
                                 .requestMatchers("/api/products/all/**").permitAll()
                                 .requestMatchers("/actuator/**").permitAll()
-                                .requestMatchers("/api/user/**").permitAll()
+                                .requestMatchers("/api/admindashboard/**").permitAll()
 
                                 .anyRequest().authenticated());
         http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
