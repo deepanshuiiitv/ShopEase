@@ -108,6 +108,18 @@ The frontend will run at:
 http://localhost:3000
 ```
 
+The Admin Dashboard will run at:
+
+```
+http://localhost:3000/admindashboard
+```
+--use ->
+```
+gmail=admin@shopease.com
+password = admin1234
+or
+change in `.env` file
+```
 
 ---
 
