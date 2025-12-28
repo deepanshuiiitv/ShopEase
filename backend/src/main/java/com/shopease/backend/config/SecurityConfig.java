@@ -43,6 +43,7 @@ public class SecurityConfig {
                                 .requestMatchers("/api/products/all/**").permitAll()
                                 .requestMatchers("/actuator/**").permitAll()
                                 .requestMatchers("/api/admindashboard/**").permitAll()
+                                .requestMatchers("/api/user/adduser").permitAll()
 
                                 .anyRequest().authenticated());
         http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
